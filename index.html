@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="top-bar">
+        <div class="brand">SCIENTIFIC</div>
+
+        <button id="angleMode" onclick="toggleAngleMode()">DEG</button>
+    </div>
+
+    <div class="display">
+
+        <div id="historyDisplay"></div>
+
+        <div id="expression">0</div>
+
+        <div id="result"></div>
+
+    </div>
+
+    <div class="buttons">
+
+        <!-- Row 1 -->
+        <button class="function" onclick="scientific('sin')">sin</button>
+        <button class="function" onclick="scientific('cos')">cos</button>
+        <button class="function" onclick="scientific('tan')">tan</button>
+        <button class="function" onclick="scientific('log')">log</button>
+        <button class="function" onclick="scientific('ln')">ln</button>
+
+        <!-- Row 2 -->
+        <button class="function" onclick="scientific('sqrt')">√</button>
+        <button class="function" onclick="square()">x²</button>
+        <button class="function" onclick="power()">xʸ</button>
+        <button class="function" onclick="scientific('factorial')">x!</button>
+        <button class="function" onclick="insertValue('π')">π</button>
+
+        <!-- Row 3 -->
+        <button class="function" onclick="insertValue('(')">(</button>
+        <button class="function" onclick="insertValue(')')">)</button>
+        <button class="function" onclick="insertValue('e')">e</button>
+        <button class="function" onclick="scientific('asin')">sin⁻¹</button>
+        <button class="function" onclick="scientific('acos')">cos⁻¹</button>
+
+        <!-- Row 4 -->
+        <button class="danger" onclick="clearCalculator()">AC</button>
+        <button class="danger" onclick="deleteLast()">DEL</button>
+        <button class="operator" onclick="insertValue('%')">%</button>
+        <button class="operator" onclick="insertValue('÷')">÷</button>
+        <button class="operator" onclick="insertValue('×')">×</button>
+
+        <!-- Row 5 -->
+        <button onclick="insertValue('7')">7</button>
+        <button onclick="insertValue('8')">8</button>
+        <button onclick="insertValue('9')">9</button>
+        <button class="operator" onclick="insertValue('-')">−</button>
+        <button class="operator" onclick="insertValue('+')">+</button>
+
+        <!-- Row 6 -->
+        <button onclick="insertValue('4')">4</button>
+        <button onclick="insertValue('5')">5</button>
+        <button onclick="insertValue('6')">6</button>
+        <button onclick="insertValue('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <!-- Row 7 -->
+        <button onclick="insertValue('1')">1</button>
+        <button onclick="insertValue('2')">2</button>
+        <button onclick="insertValue('3')">3</button>
+        <button onclick="insertValue('0')">0</button>
+        <button onclick="toggleSign()">±</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
